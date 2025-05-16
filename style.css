@@ -1,0 +1,83 @@
+/* Reset de márgenes y configuración general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Hace que el cuerpo ocupe toda la pantalla */
+body, html {
+    width: 100%;
+    height: 100%;
+    background-color: #f0f0f0;
+}
+
+/* Contenedor principal con video de fondo */
+.contenedor {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;    
+    object-fit: cover;
+}
+
+/* Contenedor de los cuadros inferiores */
+.contenedores-inferiores {
+    position: fixed; /* Fija los contenedores en la pantalla */
+    bottom: 50px; /* Ajusta la distancia desde la parte inferior */
+    right: 300px; /* Ajusta la distancia desde la parte derecha */
+    display: flex;
+    flex-direction: column; /* Organiza los cuadros verticalmente */
+    gap: 10px; /* Espaciado entre los cuadros */
+}
+
+/* Estilos de los cuadros inferiores */
+.contenedor-inferior {
+    width: 300px; /* Ancho del cuadro */
+    height: 40px; /* Alto del cuadro */
+    background-color: rgba(9, 41, 61, 0.776); /* Azul Ocean Boat Blue con transparencia */
+    color: white; /* Color del texto */
+    
+    /* Asegurar centrado del texto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    border-radius: 7px; /* Bordes redondeados */
+    font-size: 0.8rem; /* Tamaño de fuente más grande */
+    text-align: center; /* Asegura que el texto no se desborde */
+    font-family: Arial, sans-serif;
+    cursor: pointer; /* Indica que se puede hacer clic */
+}
+
+/* Estilos para el enlace */
+.contenedor-inferior a {
+    color: white;
+    text-decoration: none
+}
+
+/* Efecto al pasar el mouse por encima */
+.contenedor-inferior:hover {
+    background-color: rgba(255, 221, 51, 0.8); /* Cambia color al pasar el cursor */
+}
+
+/* Estilo para el contenedor que contiene el enlace invisible  SIGUE SIN FUNCIONAR */
+.contenedor-enlace {
+    position: absolute;
+    top: 10px; /* Distancia desde la parte superior */
+    left: 10px; /* Distancia desde la parte izquierda */
+    width: 0;
+    height: 0;
+    z-index: 10; /* Asegura que esté por encima de otros elementos */
+}
+
+/* Estilo para el enlace invisible dentro del contenedor */
+.enlace-invisible {
+    display: block;
+    width: 0;
+    height: 0;
+    text-decoration: none; /* Elimina el subrayado */
+}
+
+
